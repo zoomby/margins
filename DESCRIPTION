@@ -1,18 +1,21 @@
 Package: margins
 Type: Package
-Title: Computes margins and confidence intervals
+Title: Marginal effects with confidence intervals
 Version: 0.1
 Date: 2013-04-18
 Author: Sasha Goodman
 Maintainer: Sasha Goodman <email@sashagoodman.com>
-Description: Computes predictions over a range of values found in the data, for
-    almost all models in the R ecosystem. The predictions are called the
-    average marginal effects or partial dependencies, depending on the
-    statistical community. The values of predictors are sampled across the
-    quantiles of a variable, which has the side benefit of revealing where data
-    is sparse or dense.  Confidence intervals are estimated using
-    bootstrapping.
-License: GPL
+Description: Computes predictions over a range of values, for almost all models
+    in the R ecosystem. These are called the average marginal effects or
+    partial dependencies, depending on the statistical community. The
+    particular values of a variable used for predictions are sampled across its
+    quantiles.  Confidence intervals are estimated using bootstrapping.
+Depends:
+    R (>= 2.8.0),
+    data.table (>= 0.5),
+    multicore (>= 0.1),
+    ggplot2 (>= 0.9),
+License: GPL-3
 Collate:
     'marginplot.R'
     'margins.R'

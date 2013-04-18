@@ -3,4 +3,4 @@ Computes predictions over a range of values found in the data, for
     average marginal effects or partial dependencies, depending on the
     statistical community. The values of predictors are sampled across the
     quantiles of a variable, which has the side benefit of revealing where data
-    is sparse or dense.  Confidence intervals are estimated using
+    is sparse or dense.  Confidence intervals are estimated using bootstrapping.
