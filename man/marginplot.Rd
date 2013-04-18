@@ -13,7 +13,7 @@
   (default is 'Marginal Effect')}
 
   \item{ylab}{(optional) label to describe predictors
-  (default is '')}
+  (default is nothing)}
 
   \item{expected}{(optional) the expected outcome in the
   population, to be drawn as a red dashed line.}
