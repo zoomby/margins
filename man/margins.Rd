@@ -2,7 +2,7 @@
 \alias{margins}
 \title{Marginal Effects}
 \usage{
-  margins(model, data, vars, boots = 1000,
+  margins(model, data, vars, boots = 0,
     predictor = quote(predict(eval_model, data)),
     mc.cores = getOption("cores"),
     weights = rep(1, nrow(data)))

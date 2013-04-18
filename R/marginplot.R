@@ -13,7 +13,10 @@
 marginplot <- function(margins, xlab="Marginal Effect", ylab="", expected){
   require('ggplot2')
   data = copy(as.data.table(margins))
-  p<- ggplot(data=data, aes(x=y,y=value, group=variable)) + geom_point() + geom_segment( aes(y = value, yend = value, x=y10, xend=y90) , alpha=0.05 ) + geom_segment( aes(y = value, yend = value, x=y05, xend=y95) , alpha=0.35 ) + labs(x=xlab, y=ylab) 
+  p<- ggplot(data=data, aes(x=y,y=value, group=variable)) + geom_point() + labs(x=xlab, y=ylab) 
+  if(!is.null(data[['y05']])){
+    p<- p+ geom_segment( aes(y = value, yend = value, x=y10, xend=y90) , alpha=0.10 ) + geom_segment( aes(y = value, yend = value, x=y05, xend=y95) , alpha=0.30 ) 
+  }
   if(!missing(expected)){
     p<- p +  geom_vline(xintercept=expected, linetype = "longdash", color="red")
   }

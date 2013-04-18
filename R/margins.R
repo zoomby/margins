@@ -14,7 +14,7 @@
 #'@import data.table
 #'@export
 #'
-margins <- function(model,data, vars, boots=1000, predictor = quote(predict(eval_model, data)), mc.cores=getOption("cores"), weights= rep(1, nrow(data))){
+margins <- function(model,data, vars, boots=0, predictor = quote(predict(eval_model, data)), mc.cores=getOption("cores"), weights= rep(1, nrow(data))){
   #eventually needs to work with factors and dummies and logical, etc.
   require('multicore');require('data.table')
   data_copy = copy(as.data.table(data))
