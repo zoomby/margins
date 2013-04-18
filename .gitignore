@@ -3,8 +3,5 @@
 *.Rproj.user
 *.Rhistory
 *.RData
-<<<<<<< HEAD
 *.DS_Store
-.Rproj.user
-=======
->>>>>>> d921516312e403f7f0f66af68e30a154f81220c3
+*.Rproj.user
